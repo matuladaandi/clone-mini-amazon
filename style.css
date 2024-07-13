@@ -163,11 +163,43 @@ nav {
     z-index: 1;
 }
 
-.box-col a{
-    font-size: 13px;color: #009999;font-weight: 500;
+.box-col a {
+    font-size: 13px;
+    color: #009999;
+    font-weight: 500;
 }
 
-.header-box{
+.header-box {
     margin-top: -20vw;
 }
 
+.products-slider {
+    background: #fff;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.products-slider .products {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.products-slider .products img {
+    max-width: 200px;
+    max-height: 200;
+}
+
+.products-slider .products {
+    scrollbar-width: none;
+    /* Menghilangkan scrollbar pada Firefox */
+    -ms-overflow-style: none;
+    /* Menghilangkan scrollbar pada IE dan Edge */
+}
+
+.products-slider .products::-webkit-scrollbar {
+    display: none;
+    /* Menghilangkan scrollbar pada browser berbasis WebKit (seperti Chrome dan Safari) */
+}

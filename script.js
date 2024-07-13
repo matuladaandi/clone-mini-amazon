@@ -28,3 +28,16 @@ next_btn.addEventListener("click", () => {
   }
   changeSlide();
 });
+
+const scrollContainer = document.querySelectorAll(".products");
+
+// Loop melalui setiap elemen dalam `scrollContainer`
+for (const item of scrollContainer) {
+  // Menambahkan event listener untuk acara 'wheel' pada setiap elemen
+  item.addEventListener("wheel", (evt) => {
+    // Mencegah perilaku default dari acara 'wheel'
+    evt.preventDefault();
+    // Menggeser elemen secara horizontal (kiri/kanan) berdasarkan delta Y dari acara 'wheel'
+    item.scrollLeft += evt.deltaY;
+  });
+}
